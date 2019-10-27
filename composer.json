@@ -1,0 +1,22 @@
+{
+    "name": "v.chetkov/get-proxy-list-client",
+    "description": "Client for interaction with GetProxyList service",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Валерий Четков",
+            "email": "chetkov.valeriy@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "psr/http-client": "^1.0",
+        "guzzlehttp/guzzle": "^6.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Chetkov\\GetProxyListClient\\": "src/"
+        }
+    }
+}
