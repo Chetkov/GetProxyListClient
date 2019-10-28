@@ -1,6 +1,6 @@
 {
     "name": "v.chetkov/get-proxy-list-client",
-    "description": "Client for interaction with GetProxyList service",
+    "description": "Client for GetProxyList API",
     "type": "library",
     "license": "MIT",
     "authors": [
