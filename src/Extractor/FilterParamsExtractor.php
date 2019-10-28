@@ -40,7 +40,7 @@ class FilterParamsExtractor
 
         $allowsRefererHeader = $filterParams->getAllowsRefererHeader();
         if (null !== $allowsRefererHeader) {
-            $result['allowsRefererHeaders'] = $allowsRefererHeader;
+            $result['allowsRefererHeader'] = $allowsRefererHeader;
         }
 
         $allowsUserAgentHeader = $filterParams->getAllowsUserAgentHeader();
@@ -50,7 +50,7 @@ class FilterParamsExtractor
 
         $allowsCustomHeaders = $filterParams->getAllowsCustomHeaders();
         if (null !== $allowsCustomHeaders) {
-            $result['allowsCustomHeader'] = $allowsCustomHeaders;
+            $result['allowsCustomHeaders'] = $allowsCustomHeaders;
         }
 
         $allowsCookies = $filterParams->getAllowsCookies();
