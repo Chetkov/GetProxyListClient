@@ -1,6 +1,6 @@
 {
     "name": "v.chetkov/get-proxy-list-client",
-    "description": "Client for GetProxyList API",
+    "description": "PHP client for GetProxyList API",
     "type": "library",
     "license": "MIT",
     "authors": [
