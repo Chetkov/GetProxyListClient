@@ -17,7 +17,7 @@ class ClientFactory
     public static function create(): Client
     {
         return new Client(
-            new HttpClientAdapter(new \GuzzleHttp\Client()),
+            new \GuzzleHttp\Client(),
             new FilterParamsExtractor(),
             new ProxyAssembler()
         );

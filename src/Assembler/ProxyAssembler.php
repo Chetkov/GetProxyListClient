@@ -17,22 +17,22 @@ class ProxyAssembler
     public function create(\stdClass $responseBody): Proxy
     {
         return new Proxy(
-            $responseBody->ip,
-            $responseBody->port,
-            $responseBody->protocol,
-            $responseBody->anonymity,
+            (string)$responseBody->ip,
+            (int)$responseBody->port,
+            (string)$responseBody->protocol,
+            (string)$responseBody->anonymity,
             new \DateTimeImmutable($responseBody->lastTested),
-            $responseBody->allowsRefererHeader,
-            $responseBody->allowsUserAgentHeader,
-            $responseBody->allowsCustomHeaders,
-            $responseBody->allowsCookies,
-            $responseBody->allowsPost,
-            $responseBody->allowsHttps,
-            $responseBody->country,
-            $responseBody->connectTime,
-            $responseBody->downloadSpeed,
-            $responseBody->secondsToFirstByte,
-            $responseBody->uptime
+            (bool)$responseBody->allowsRefererHeader,
+            (bool)$responseBody->allowsUserAgentHeader,
+            (bool)$responseBody->allowsCustomHeaders,
+            (bool)$responseBody->allowsCookies,
+            (bool)$responseBody->allowsPost,
+            (bool)$responseBody->allowsHttps,
+            (string)$responseBody->country,
+            (float)$responseBody->connectTime,
+            (float)$responseBody->downloadSpeed,
+            (float)$responseBody->secondsToFirstByte,
+            (float)$responseBody->uptime
         );
     }
 }
