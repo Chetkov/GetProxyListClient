@@ -1,12 +1,12 @@
-##Описание
+## Описание
 PHP обёртка для API https://getproxylist.com/
 
-##Установка
+## Установка
 ```
 composer require v.chetkov/get-proxy-list-client
 ```
 
-##Использование
+## Использование
 ```php
 <?php
 
