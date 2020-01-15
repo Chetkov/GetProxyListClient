@@ -10,8 +10,7 @@ composer require v.chetkov/get-proxy-list-client
 ```php
 <?php
 
-use Chetkov\GetProxyListClient\ClientFactory;
-use Chetkov\GetProxyListClient\DTO\FilterParams;
+use Chetkov\GetProxyListClient\DTO\FilterParams;use Chetkov\GetProxyListClient\Factory\ClientFactory;
 
 $client = ClientFactory::create();
 $filter = (new FilterParams())

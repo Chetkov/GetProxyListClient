@@ -1,13 +1,14 @@
 <?php
 
-namespace Chetkov\GetProxyListClient;
+namespace Chetkov\GetProxyListClient\Factory;
 
 use Chetkov\GetProxyListClient\Assembler\ProxyAssembler;
+use Chetkov\GetProxyListClient\Client;
 use Chetkov\GetProxyListClient\Extractor\FilterParamsExtractor;
 
 /**
  * Class ClientFactory
- * @package Chetkov\GetProxyListClient
+ * @package Chetkov\GetProxyListClient\Factory
  */
 class ClientFactory
 {

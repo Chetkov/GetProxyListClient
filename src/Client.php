@@ -10,7 +10,7 @@ use Chetkov\GetProxyListClient\Exception\InvalidApiKeyException;
 use Chetkov\GetProxyListClient\Exception\RequestException;
 use Chetkov\GetProxyListClient\Exception\ValidationException;
 use Chetkov\GetProxyListClient\Extractor\FilterParamsExtractor;
-use GuzzleHttp\ClientInterface;
+use GuzzleHttp\ClientInterface as HttpClientInterface;
 use GuzzleHttp\Exception\GuzzleException;
 use GuzzleHttp\Psr7\Request;
 use Psr\Http\Message\RequestInterface;
@@ -20,9 +20,9 @@ use Psr\Http\Message\ResponseInterface;
  * Class Client
  * @package Chetkov\GetProxyListClient
  */
-class Client
+class Client implements ClientInterface
 {
-    /** @var ClientInterface */
+    /** @var HttpClientInterface */
     private $httpClient;
 
     /** @var FilterParamsExtractor */
@@ -33,12 +33,12 @@ class Client
 
     /**
      * Client constructor.
-     * @param ClientInterface $httpClient
+     * @param HttpClientInterface $httpClient
      * @param FilterParamsExtractor $filterParamsExtractor
      * @param ProxyAssembler $proxyAssembler
      */
     public function __construct(
-        ClientInterface $httpClient,
+        HttpClientInterface $httpClient,
         FilterParamsExtractor $filterParamsExtractor,
         ProxyAssembler $proxyAssembler
     ) {
@@ -97,7 +97,7 @@ class Client
      * @throws InvalidApiKeyException
      * @throws RequestException
      */
-    public function execute(FilterParams $filterParams): \stdClass
+    private function execute(FilterParams $filterParams): \stdClass
     {
         $requestMethod = 'GET';
         $params = $this->filterParamsExtractor->extract($filterParams);
